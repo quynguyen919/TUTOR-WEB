@@ -1,0 +1,98 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgba(104, 197, 175, 1);
+    color: white;
+    padding-bottom: 10px;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    width: 10%;
+    display: flex;
+    position: relative;
+    padding: 2% 0% 0% 0;
+}
+
+.footer-social i {
+    margin-left: 50px;
+    text-align: center;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.instagram {
+    cursor: pointer;
+    background: pink;
+    background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.facebook{
+    cursor: pointer;
+    color: #515ECF;
+}
+.youtube{
+    cursor: pointer;
+    color: #d22e2e;
+}
+
+.info {
+    width: 35%;
+    padding-left: 2%;
+}
+
+.footer-widget-title h3::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 8%;
+    height: 5%;
+    background: #f00;
+}
+
+.footer-widget-title h3 {
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+
+.vl {
+    border-left: solid white;
+    height: 200px;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.content {
+    display: flex;
+    padding: 4% 0% 0% 2%;
+    width: 55%;
+}
+
+.for-customer {
+    margin-left: 10%;
+}
+
+.footer-title h3 {
+    text-transform: uppercase;
+    float: right;
+}
+
+.for-customer ul li {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    text-align: left;
+    margin-left: -30%;
+}
+.for-customer ul li :hover{
+    color: rgba(237, 151, 22, 0.84);
+}

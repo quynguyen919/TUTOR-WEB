@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from 'src/app/Shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatButtonModule
+    SharedModule
   ]
 })
 export class HomeModule { }

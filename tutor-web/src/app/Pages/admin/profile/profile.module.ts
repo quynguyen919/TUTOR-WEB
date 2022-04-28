@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from 'src/app/Shared/shared.module';
 
 
 @NgModule({
@@ -15,9 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule
+    SharedModule
   ]
 })
 export class ProfileModule { }

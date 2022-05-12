@@ -1,0 +1,15 @@
+.select-option {
+    border-top: 3px solid;
+    // border-bottom: 100px thin;
+    margin-bottom: 5px;
+}
+
+.customer {
+    margin-top: 3px;
+}
+
+mat-form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

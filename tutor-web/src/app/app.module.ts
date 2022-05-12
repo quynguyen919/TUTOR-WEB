@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     SharedModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],

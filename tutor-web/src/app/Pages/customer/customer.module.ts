@@ -4,6 +4,7 @@ import { CustomerRoutingModule } from '../customer/customer-routing.module';
 import { CustomerComponent } from './customer.component';
 import { SharedModule } from 'src/app/Shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     CustomerComponent,
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CustomerRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    MatSelectModule
   ]
-  
+
 })
 export class CustomerModule { }

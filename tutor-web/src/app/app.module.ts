@@ -16,6 +16,8 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +29,15 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     SharedModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     
   ],
   providers: [],

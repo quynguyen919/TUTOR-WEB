@@ -5,9 +5,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
-
-
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatRadioModule
   ],
   exports:[
     MatToolbarModule,
@@ -25,7 +29,9 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatRadioModule
   ]
 
 

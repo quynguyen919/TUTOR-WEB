@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { SignInComponent } from '../sign-in/sign-in.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -6,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
 
+ public open(){
+    this.dialog.open(SignUpComponent, { panelClass: 'custom-dialog-container' })
+  }
+  public openSI(){
+    this.dialog.open(SignInComponent, { panelClass: 'custom-dialog-container' })
+  }
 }

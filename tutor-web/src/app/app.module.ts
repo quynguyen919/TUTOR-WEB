@@ -11,16 +11,18 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FooterComponent } from './Components/footer/footer.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignInComponent } from './Components/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavBarComponent,
+    SignUpComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     SharedModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],

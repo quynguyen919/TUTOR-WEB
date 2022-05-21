@@ -11,7 +11,11 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FooterComponent } from './Components/footer/footer.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignInComponent } from './Components/sign-in/sign-in.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
@@ -19,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     FooterComponent,
     NavBarComponent,
+    SignUpComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,

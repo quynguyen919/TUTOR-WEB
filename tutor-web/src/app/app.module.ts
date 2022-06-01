@@ -18,6 +18,7 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     provideFirestore(() => getFirestore()),
     SharedModule,
     BrowserAnimationsModule,
+    MatIconModule,
     FormsModule,
     ReactiveFormsModule,
     

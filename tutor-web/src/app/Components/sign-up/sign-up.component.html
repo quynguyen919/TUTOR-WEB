@@ -1,54 +1,63 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 <div class=" flex-r container" style="padding: 0;">
     <div class="flex-r login-wrapper">
-      <div class="login-text">
-        <div class="logo">
-          <span><i class="fab fa-speakap"></i></span>
-          <span> QDT</span>
-        </div>
-        <h1>Đăng Ký</h1>
-        <mat-radio-group  aria-label="Select an option">
-            <mat-radio-button value="1">Gia Sư</mat-radio-button>
-            <mat-radio-button value="2">PHHS</mat-radio-button>
-          </mat-radio-group>
-        <form class="flex-c">
-          <div class="input-box">
-            <span class="label">E-mail</span>
-            <div class=" flex-r input">
-              <input type="text" placeholder="name@abc.com">
-              <i class="fas fa-at"></i>
+        <div class="login-text">
+            <div class="logo">
+                <span><i class="fab fa-speakap"></i></span>
+                <span> QDT</span>
             </div>
-          </div>
-          
+            <h1>Đăng Ký</h1>
+            <form [formGroup]="this.formupdate" class="flex-c">
 
-          <div class="input-box">
-            <span class="label">Password</span>
-            <div class="flex-r input">
-              <input type="password" placeholder="8+ (a, A, 1, #)">
-              <i class="fas fa-lock"></i>
-            </div>
-          </div>
-          
-          <div class="input-box">
-            <span class="label">Conform Password</span>
-            <div class="flex-r input">
-              <input type="password" placeholder="8+ (a, A, 1, #)">
-              <i class="fas fa-lock"></i>
-            </div>
-          </div>
+            <mat-radio-group formControlName="collect" aria-label="Select an option">
+                <mat-radio-button value="Tutor">Tutor</mat-radio-button>
+                <mat-radio-button value="User">User </mat-radio-button>
+            </mat-radio-group>
+                <div class="input-box">
+                    <span  class="label">Name</span>
+                    <div class=" flex-r input">
+                        <input formControlName="name" type="text" placeholder="Full Name">
+                        <i class="fas fa-at"></i>
+                    </div>
+                </div>
 
-          <div class="check">
-            <input type="checkbox" name="" id="">
-            <span>Đồng ý với các điều khoản của QDT</span>
-          </div>
+                <div class="input-box">
+                    <span class="label">E-mail</span>
+                    <div class=" flex-r input">
+                        <input formControlName="email" type="text" placeholder="name@abc.com">
+                        <i class="fas fa-at"></i>
+                    </div>
+                </div>
 
-          <input class="btn" type="submit" value="Tạo tài khoản">
-          <span class="extra-line">
+
+                <div class="input-box">
+                    <span class="label">Password</span>
+                    <div class="flex-r input">
+                        <input type="password" placeholder="8+ (a, A, 1, #)">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <span class="label">Conform Password</span>
+                    <div class="flex-r input">
+                        <input type="password" placeholder="8+ (a, A, 1, #)">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" name="" id="">
+                    <span>Đồng ý với các điều khoản của QDT</span>
+                </div>
+
+                <input class="btn"  (click)="this.addData()" value="Tạo tài khoản">
+                <span class="extra-line">
             <span>Bạn đã có tài khoản?</span>
-            <a [mat-dialog-close]="" (click)="open()"  style="margin-left: 10px;cursor: pointer;">Đăng nhập</a>
-          </span>
-        </form>
+                <a [mat-dialog-close]="" (click)="open()" style="margin-left: 10px;cursor: pointer;">Đăng nhập</a>
+                </span>
+            </form>
 
-      </div>
+        </div>
     </div>
-  </div>
+</div>

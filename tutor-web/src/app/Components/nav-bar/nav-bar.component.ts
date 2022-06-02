@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { UserService } from 'src/app/Services/user.service';
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 
@@ -10,7 +11,7 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public dialog : MatDialog) { }
+  constructor(public dialog : MatDialog,public auth: UserService) { }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-<div class=" flex-r container" style="padding: 0;">
+<div *ngIf="!this.auth.user" class=" flex-r container" style="padding: 0;">
     <div class="flex-r login-wrapper">
       <div class="login-text">
         <div class="logo">
@@ -32,10 +32,14 @@
             <a [mat-dialog-close]="" (click)="open()" style="margin-left: 10px;cursor: pointer;" >Đăng kí</a>
           </span>
         </form>
-        <div id="customBtn" class="customGPlusSignIn" (click)="login()"> 
+        <div id="customBtn" class="customGPlusSignIn" (click)="this.auth.login()"> 
             <span class="icon"></span>
             <span class="buttonText">Đăng nhập bằng Google</span>
         </div>
       </div>
     </div>
+  </div>
+  <div  style="width: 400px;background-color: black;" *ngIf="this.auth.user" [mat-dialog-close]="onCloseConfirm()">
+    <!-- <mat-icon style="color: rgb(47, 255, 127);margin-left: 40%;font-size: 60px;">check_circle</mat-icon> -->
+    <h3 style="padding: 100px 0 100px 0; text-align: center;color: rgb(47, 255, 127);font-size: 30px;"> Đăng nhập thành công</h3>
   </div>

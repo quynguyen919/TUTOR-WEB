@@ -7,25 +7,22 @@
                 <span> QDT</span>
             </div>
             <h1>Đăng Ký</h1>
-            <form class="flex-c">
+            <form [formGroup]="this.formupdate" class="flex-c">
 
-                <mat-radio-group aria-label="Select an option">
-                    <mat-radio-button value="1">Tutor</mat-radio-button>
-                    <mat-radio-button value="2">User </mat-radio-button>
+                <mat-radio-group formControlName="collect" aria-label="Select an option">
+                    <mat-radio-button value="Tutor">Tutor</mat-radio-button>
+                    <mat-radio-button value="User">User </mat-radio-button>
                 </mat-radio-group>
                 <div class="input-box">
                     <span class="label">Name</span>
                     <div class=" flex-r input">
-                        <input type="text" placeholder="Full Name">
-                    </div>
-                </div>
-
-                <div class="input-box">
-                    <span class="label">E-mail</span>
-                    <div class=" flex-r input">
-                        <input type="text" placeholder="name@abc.com">
+                        <input formControlName="name" type="text" placeholder="Full Name">
                         <i class="fas fa-at"></i>
                     </div>
+                </div>
+                <div>
+                    <input formControlName="email" type="text" placeholder="name@abc.com">
+                    <i class="fas fa-at"></i>
                 </div>
 
 
@@ -50,7 +47,7 @@
                     <span>Đồng ý với các điều khoản của QDT</span>
                 </div>
 
-                <input class="btn" type="submit" value="Tạo tài khoản">
+                <input class="btn" (click)="this.addData()" value="Tạo tài khoản">
                 <span class="extra-line">
             <span>Bạn đã có tài khoản?</span>
                 <a [mat-dialog-close]="" (click)="open()" style="margin-left: 10px;cursor: pointer;">Đăng nhập</a>

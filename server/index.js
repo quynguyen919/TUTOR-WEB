@@ -5,6 +5,8 @@ const cors = require("cors");
 const admin = require("firebase-admin");
 const path = require('path');
 
+
+
 var key = require("./keys/firebase-key.json");
 
 admin.initializeApp({
@@ -20,7 +22,7 @@ app.use(cors());
 app.post("/api", async(req, res) => {
     let body = req.body;
     console.log(body);
-
+try{
     let docName = body.data.name + "-" + Math.round(Math.random() * 10).toString();
 
     let result = await firestore
@@ -30,7 +32,10 @@ app.post("/api", async(req, res) => {
 
     res.send({
         message: "Successful!!!",
-    });
+    });}
+    catch(error){
+        console.log(error.toString())
+    }
 });
 
 app.listen(3000, "0.0.0.0", () => {

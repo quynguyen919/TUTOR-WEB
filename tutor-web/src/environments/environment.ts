@@ -11,7 +11,9 @@ export const environment = {
     authDomain: 'tutor-web-62d7b.firebaseapp.com',
     messagingSenderId: '816452192723',
   },
-  production: false
+  production: false,
+  endpoint:'http://127.0.0.1:3000'
+
 };
 
 /*

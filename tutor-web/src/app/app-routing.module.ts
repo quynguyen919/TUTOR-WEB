@@ -14,12 +14,13 @@ const routes: Routes = [
         (m) => m.ProfileModule
       ),
   },
+  { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
   {
     path: 'customer',
     loadChildren: () =>
       import('../app/Pages/customer/customer.module').then((m) => m.CustomerModule),
   },
-  { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
+  { path: 'Tutor-seeking', loadChildren: () => import('./Pages/tutor-seeking/tutor-seeking.module').then(m => m.TutorSeekingModule) },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

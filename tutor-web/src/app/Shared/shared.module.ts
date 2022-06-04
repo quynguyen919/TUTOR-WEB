@@ -44,11 +44,19 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListOrderComponent } from '../Components/list-order/list-order.component';
+import { OrderComponent } from '../Components/order/order.component';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
+  declarations: [
+    ListOrderComponent,
+    OrderComponent,
+  ],
   imports: [
+    CommonModule,
     A11yModule,
     CdkAccordionModule,
     ClipboardModule,
@@ -95,10 +103,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    
   ],
   
   exports:[
     A11yModule,
+    OrderComponent,
+    ListOrderComponent,
     CdkAccordionModule,
     ClipboardModule,
     CdkStepperModule,

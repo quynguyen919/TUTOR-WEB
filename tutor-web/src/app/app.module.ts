@@ -19,6 +19,10 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { ContactComponent } from './Components/contact/contact.component';
+import { OrderComponent } from './Components/order/order.component';
+import { ListOrderComponent } from './Components/list-order/list-order.component';
+import { CommonModule } from "@angular/common";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +30,12 @@ import { MatIconModule } from '@angular/material/icon';
     NavBarComponent,
     SignUpComponent,
     SignInComponent,
+    ContactComponent,
+   
+    
   ],
   imports: [
+   
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

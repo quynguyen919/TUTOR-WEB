@@ -1,0 +1,40 @@
+table {
+    border: 1px solid ;
+   margin-left: 15%;
+    border-collapse: separate;
+    width: 70%;
+    // border-spacing: 0 30px;
+  }
+ th {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid ;
+
+  }
+  td{
+    box-shadow: 0 5px #888888;
+    
+  }
+  #btn{
+      text-align: end;
+     
+
+  }
+  #btn button{
+    margin-top:  50%;
+  }
+  #description li{
+    list-style: none;
+    text-align: left;
+  }
+  #description div li {
+      margin-left: 10px;
+  }
+  .body-seeking{
+      padding: 20px;
+  }
+  #salary{
+      text-align: end;
+      font-size: larger;
+      color: coral;
+  }

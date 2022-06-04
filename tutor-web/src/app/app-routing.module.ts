@@ -19,6 +19,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('../app/Pages/customer/customer.module').then((m) => m.CustomerModule),
   },
+  { path: 'Tutor-seeking', loadChildren: () => import('./Pages/tutor-seeking/tutor-seeking.module').then(m => m.TutorSeekingModule) },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

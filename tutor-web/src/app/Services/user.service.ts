@@ -21,6 +21,9 @@ export class UserService {
   public async postData(name:string,email:string,collectName:string){
     return this.http.post(environment.endpoint+'/api',{data:{name:name,email:email,},collectionName:collectName});
    }
+   public async postOrder(name:string,status:string,address:string,phoneNumber:string,salary:number,req:string,collectName:string){
+    return this.http.post(environment.endpoint+'/api',{data:{name:name,status:status,address:address,phoneNumber:phoneNumber,salary:salary,req:req},collectionName:collectName});
+   }
    public async login() {
     return await signInWithPopup(this.auth, new GoogleAuthProvider());
   }

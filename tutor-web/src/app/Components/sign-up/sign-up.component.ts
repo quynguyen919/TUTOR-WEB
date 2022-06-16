@@ -11,9 +11,10 @@ import { Firestore } from 'firebase/firestore';
 })
 export class SignUpComponent implements OnInit {
   formupdate !: FormGroup;
-  constructor(public dialog : MatDialog,public userSv:UserService, public formBuild: FormBuilder) {
+
+  constructor(public dialog : MatDialog,public userSv:UserService, public formBuild: FormBuilder,) {
     this.formupdate = this.formBuild.group({
-      name: '', email: '',  collect: ''
+      name: '', email: '',  collect: '' , password:''
     })
    }
   ngOnInit(): void {
@@ -27,4 +28,8 @@ public async addData() {
     alert(value['message']);
   });
 }
+public async onSignup(email:string,password:string){
+  await (await this.userSv.signUp(email,password))
+}
+
 }

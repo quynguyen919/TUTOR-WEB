@@ -24,7 +24,12 @@
           <mat-icon>account_circle</mat-icon>
           <span style="padding-left: 5px;">Đăng nhập</span>
         </button>
-        <div class="circle" *ngIf="this.auth.user" >
-          <img  [src]="this.auth.user.photoURL" ></div>
+        <div class="circle" *ngIf="this.auth.user" style="cursor: pointer;">
+          <img *ngIf="this.auth.user.photoURL != null" [src]="this.auth.user.photoURL" >
+          <img *ngIf="this.auth.user.photoURL == null" src="../../../assets/images/avatar.jpg" >
+          
+          <mat-icon (click)="this.auth.logout()" style="color: white;">exit_to_app</mat-icon>
+            
+        </div>
 
 </mat-toolbar>

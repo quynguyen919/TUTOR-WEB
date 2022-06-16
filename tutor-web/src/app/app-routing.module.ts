@@ -20,6 +20,7 @@ const routes: Routes = [
       import('../app/Pages/customer/customer.module').then((m) => m.CustomerModule),
   },
   { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
+  { path: 'log-in', loadChildren: () => import('./Pages/log-in/log-in.module').then(m => m.LogInModule) },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -7,7 +7,7 @@
                 <span> QDT</span>
             </div>
             <h1>Đăng Ký</h1>
-            <form [formGroup]="this.formupdate" class="flex-c">
+            <form  [formGroup]="this.formupdate" class="flex-c">
 
                 <mat-radio-group formControlName="collect" aria-label="Select an option">
                     <mat-radio-button value="Tutor">Tutor</mat-radio-button>
@@ -20,24 +20,20 @@
                         <i class="fas fa-at"></i>
                     </div>
                 </div>
-                <div>
+                <div class="input-box">
+                    <span class="label">Email</span>
+                    <div class="flex-r input">
                     <input formControlName="email" type="text" placeholder="name@abc.com">
                     <i class="fas fa-at"></i>
+                </div>
+
                 </div>
 
 
                 <div class="input-box">
                     <span class="label">Password</span>
                     <div class="flex-r input">
-                        <input type="password" placeholder="8+ (a, A, 1, #)">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                </div>
-
-                <div class="input-box">
-                    <span class="label">Conform Password</span>
-                    <div class="flex-r input">
-                        <input type="password" placeholder="8+ (a, A, 1, #)">
+                        <input formControlName="password" type="password" placeholder="8+ (a, A, 1, #)">
                         <i class="fas fa-lock"></i>
                     </div>
                 </div>
@@ -47,7 +43,7 @@
                     <span>Đồng ý với các điều khoản của QDT</span>
                 </div>
 
-                <input class="btn" (click)="this.addData()" value="Tạo tài khoản">
+                <input class="btn" (click)="addData();onSignup(this.formupdate.value.email,this.formupdate.value.password)" value="Tạo tài khoản">
                 <span class="extra-line">
             <span>Bạn đã có tài khoản?</span>
                 <a [mat-dialog-close]="" (click)="open()" style="margin-left: 10px;cursor: pointer;">Đăng nhập</a>

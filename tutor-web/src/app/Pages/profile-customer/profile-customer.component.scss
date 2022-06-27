@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
 html {
     position: relative;
@@ -370,4 +371,10 @@ a:hover {
 #title-content-2 {
     padding-left: 100px;
     padding-right: 100px;
+=======
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+>>>>>>> 0d13eec0fdef64720a924a50db248459816bae87
 }

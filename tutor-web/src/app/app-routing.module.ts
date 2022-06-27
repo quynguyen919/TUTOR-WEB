@@ -22,6 +22,7 @@ const routes: Routes = [
   },
 
   { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
+  
   { path: 'log-in', loadChildren: () => import('./Pages/log-in/log-in.module').then(m => m.LogInModule) },
 
   { path: 'Tutor-seeking', loadChildren: () => import('./Pages/tutor-seeking/tutor-seeking.module').then(m => m.TutorSeekingModule) },

@@ -21,6 +21,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+app.get("/getAll", (req, res) => {
+    let temp = request.query;
+    console.log("API 2" + JSON.stringify(temp));
+})
+
 app.post("/api", async(req, res) => {
     let body = req.body;
     console.log(body);

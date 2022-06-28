@@ -8,11 +8,9 @@ import { SignUpComponent } from 'src/app/Components/sign-up/sign-up.component';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public dialog : MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  public open(){
-    this.dialog.open(SignUpComponent, { panelClass: 'custom-dialog-container' })
-  }
+  
 }

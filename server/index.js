@@ -8,11 +8,8 @@ const path = require('path');
 
 
 var key = require("./keys/firebase-key.json");
-<<<<<<< HEAD
 const { request } = require("http");
 const { response } = require("express");
-=======
->>>>>>> 0d13eec0fdef64720a924a50db248459816bae87
 
 admin.initializeApp({
     credential: admin.credential.cert(key),
@@ -24,14 +21,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-<<<<<<< HEAD
-app.get("/getAll", (req, res) => {
-    let temp = request.query;
-    console.log("API 2" + JSON.stringify(temp));
+app.get("/api/:collectionName", async function(req, res) {
+    let profile = req.params.collection;
+    let docId = req.params.docId;
+    let querySnapshot = await firestore.collection("profile").doc(docId).get();
+    let result = querySnapshot.data();
+    console.log(result);
+    res.send(result);
 })
 
-=======
->>>>>>> 0d13eec0fdef64720a924a50db248459816bae87
 app.post("/api", async(req, res) => {
     let body = req.body;
     console.log(body);
@@ -51,20 +49,7 @@ try{
     }
 });
 
-<<<<<<< HEAD
-app.put("/api/:collectionName/:docId", async (res,req) => {
-    let collectionName = req.body.collectionName;
-    let docId = req.body.docId;
 
-    let data = await firestore.collection(collectionName).doc(docId).update(req.body.data);
-    response.send({
-        message: "Update Successful!!!",
-        updateTime: data.writeTime,
-    });
-})
-
-=======
->>>>>>> 0d13eec0fdef64720a924a50db248459816bae87
 app.listen(3000, "0.0.0.0", () => {
     console.log("Server is running!!");
 });

@@ -7,8 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./Pages/home/home.module').then((m) => m.HomeModule),
   },
-  
-  
+  {
+    path: 'profile-customer',
+    loadChildren: () =>
+      import('./Pages/profile-customer/profile-customer.module').then(
+        (m) => m.ProfileCustomerModule
+      ),
+  },
   {
     path: 'customer',
     loadChildren: () =>
@@ -17,13 +22,6 @@ const routes: Routes = [
       ),
   },
 
-  {
-    path: 'profile-customer',
-    loadChildren: () =>
-      import('./Pages/profile-customer/profile-customer.module').then(
-        (m) => m.ProfileCustomerModule
-      ),
-  },
   {
     path: 'log-in',
     loadChildren: () =>
@@ -37,21 +35,13 @@ const routes: Routes = [
         (m) => m.TutorSeekingModule
       ),
   },
-  
-  { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
   {
-    path: 'customer',
+    path: 'admin/dashboard',
     loadChildren: () =>
-      import('../app/Pages/customer/customer.module').then((m) => m.CustomerModule),
+      import('./Pages/admin/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
   },
-
-  { path: 'profile-customer', loadChildren: () => import('./Pages/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule) },
-  
-  { path: 'log-in', loadChildren: () => import('./Pages/log-in/log-in.module').then(m => m.LogInModule) },
-
-  { path: 'Tutor-seeking', loadChildren: () => import('./Pages/tutor-seeking/tutor-seeking.module').then(m => m.TutorSeekingModule) },
-  { path: 'admin/dashboard', loadChildren: () => import('./Pages/admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

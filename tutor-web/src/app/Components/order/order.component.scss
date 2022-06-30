@@ -1,38 +1,41 @@
 table {
-  border: 1px solid ;
- margin-left: 15%;
-  border-collapse: collapse;
-  width: 70%;
-  // border-spacing: 0 30px;
+    border: 4px solid;
+    margin-left: 15%;
+    border-collapse: collapse;
+    width: 70%;
+    // border-spacing: 0 30px;
 }
+
 th {
-  text-align: center;
-  padding: 8px;
-  border: 1px solid ;
-
+    text-align: center;
+    padding: 8px;
+    border: 1px solid;
 }
 
+#btn {
+    text-align: end;
+}
 
-  
-  #btn{
-      text-align: end;
-    
-  }
-  #btn button{
-    margin-top:  100px;
-  }
-  #description li{
+#btn button {
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+#description li {
     list-style: none;
     text-align: left;
-  }
-  #description div li {
-      margin-left: 10px;
-  }
-  .body-seeking{
-      padding: 20px;
-  }
-  #salary{
-      text-align: end;
-      font-size: larger;
-      color: coral;
-  }
+}
+
+#description div li {
+    margin-left: 10px;
+}
+
+.body-seeking {
+    padding: 20px;
+}
+
+#salary {
+    text-align: end;
+    font-size: larger;
+    color: coral;
+}

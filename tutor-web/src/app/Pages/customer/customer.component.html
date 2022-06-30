@@ -46,61 +46,20 @@
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         ">
-    <div class="card" style="width: 25rem; border: 5px solid; margin: 5rem;">
-        <img src="https://giaitri.vn/wp-content/uploads/2019/07/avatar-la-gi-01.jpg" class="card-img-top" alt="..." style="margin: 0">
+    <div class="card" *ngFor="let item of customerSV.items" style="width: 25rem; border: 5px solid; margin: 5rem;">
+        <!-- <img [src]="item.photoURL" class="card-img-top"style="margin: 0"> -->
         <div class="card-body">
-            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Huynh Duc Dat</h5>
+            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">{{item.name}}</h5>
             <div style="display: flex;">
-                <h2>Ha Noi</h2>
+                <h2>{{item.place}}</h2>
                 <div style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;"></div>
-                <h2>Toan, Ly, Hoa</h2>
+                <h2>{{item.Subject}}</h2>
             </div>
-            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
+            <p class="card-text">{{item.experience}}</p>
             <a href="#" class="btn btn-primary">Mời dạy</a>
             <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
         </div>
     </div>
-    <div class="card" style="width: 25rem; border: 5px solid; margin: 5rem;">
-        <img src="https://giaitri.vn/wp-content/uploads/2019/07/avatar-la-gi-01.jpg" class="card-img-top" alt="..." style="margin: 0; ">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Huynh Duc Dat</h5>
-            <div style="display: flex;">
-                <h2>Ha Noi</h2>
-                <div style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;"></div>
-                <h2>Toan, Ly, Hoa</h2>
-            </div>
-            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
-            <a href="#" class="btn btn-primary">Mời dạy</a>
-            <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
-        </div>
-    </div>
-    <div class="card" style="width: 25rem; border: 5px solid; margin: 5rem;">
-        <img src="https://giaitri.vn/wp-content/uploads/2019/07/avatar-la-gi-01.jpg" class="card-img-top" alt="..." style="margin: 0 ">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Huynh Duc Dat</h5>
-            <div style="display: flex;">
-                <h2>Ha Noi</h2>
-                <div style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;"></div>
-                <h2>Toan, Ly, Hoa</h2>
-            </div>
-            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
-            <a href="#" class="btn btn-primary">Mời dạy</a>
-            <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
-        </div>
-    </div>
-    <div class="card" style="width: 25rem; border: 5px solid; margin: 5rem;">
-        <img src="https://giaitri.vn/wp-content/uploads/2019/07/avatar-la-gi-01.jpg" class="card-img-top" alt="..." style="margin: 0rem; ">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Huynh Duc Dat</h5>
-            <div style="display: flex;">
-                <h2>Ha Noi</h2>
-                <div style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;"></div>
-                <h2>Toan, Ly, Hoa</h2>
-            </div>
-            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
-            <a href="#" class="btn btn-primary">Mời dạy</a>
-            <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
-        </div>
-    </div>
+    
 
 </div>

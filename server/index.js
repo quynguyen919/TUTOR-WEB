@@ -21,13 +21,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-app.get("/api/:collectionName", async function(req, res) {
-    let profile = req.params.collection;
-    let docId = req.params.docId;
-    let querySnapshot = await firestore.collection("profile").doc(docId).get();
-    let result = querySnapshot.data();
-    console.log(result);
-    res.send(result);
+app.get("/api/:collection", async function(req, res) {
+    let params = req.params.collection;
+    let querySnapshot = await firestore.collection(params).get();
+    let datas = await querySnapshot.docs.map((value)=>{
+        let temp = value.data();
+        return temp;
+    });
+    res.send(datas)
 })
 
 app.post("/api", async(req, res) => {
@@ -50,6 +51,7 @@ try{
 });
 
 
-app.listen(3000, "0.0.0.0", () => {
-    console.log("Server is running!!");
-});
+let Port = 3000;
+app.listen(Port, () => {
+    console.log(`Server is running on port http://localhost:${Port}/`);
+})

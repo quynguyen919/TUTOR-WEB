@@ -4,5 +4,9 @@ export interface Item{
     phoneNumber: string,
     status:string,
     salary:number,
-    req:string
+    req:string,
+    photoURL:string,
+    place:string,
+    Subject:string,
+    experience:string,
 }

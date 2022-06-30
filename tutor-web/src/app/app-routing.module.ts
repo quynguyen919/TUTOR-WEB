@@ -8,13 +8,6 @@ const routes: Routes = [
       import('./Pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'admin/profile',
-    loadChildren: () =>
-      import('./Pages/admin/profile/profile.module').then(
-        (m) => m.ProfileModule
-      ),
-  },
-  {
     path: 'profile-customer',
     loadChildren: () =>
       import('./Pages/profile-customer/profile-customer.module').then(
@@ -28,6 +21,7 @@ const routes: Routes = [
         (m) => m.CustomerModule
       ),
   },
+
   {
     path: 'log-in',
     loadChildren: () =>
@@ -42,11 +36,12 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'admin',
+    path: 'admin/dashboard',
     loadChildren: () =>
-      import('./Pages/admin/home/home.module').then((m) => m.HomeModule),
+      import('./Pages/admin/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
   },
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

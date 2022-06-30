@@ -23,6 +23,7 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { OrderComponent } from './Components/order/order.component';
 import { ListOrderComponent } from './Components/list-order/list-order.component';
 import { CommonModule } from "@angular/common";
+import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/side-bar-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { CommonModule } from "@angular/common";
     SignUpComponent,
     SignInComponent,
     ContactComponent,
+    SideBarAdminComponent,
    
     
   ],

@@ -1,0 +1,13 @@
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>QDT<span>Admin</span></div>
+		</div>
+		<br>
+        <form [formGroup]="this.formupdate">
+		    <div class="login">
+				<input formControlName="email" type="text" placeholder="username" name="user"><br>
+				<input formControlName="password" type="password" placeholder="password" name="password"><br>
+				<input routerLink="Dashboard"  (click)="onSignIp(this.formupdate.value.email,this.formupdate.value.password)" type="button" value="Login">
+		    </div>
+        </form>

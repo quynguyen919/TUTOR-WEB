@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tutor-web-62d7b": {
+      "hosting": {
+        "admin": [
+          "tutor-web-62d7b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tutor-web-62d7b"
+  }
+}

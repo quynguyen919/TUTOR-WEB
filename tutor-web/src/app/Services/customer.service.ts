@@ -11,7 +11,7 @@ export class CustomerService {
   public items: Array<Item>=[];
 
   constructor(public http:HttpClient) { }
-  public getDataFromFB(apiPath: string) {
-    return this.http.get(environment.endpoint+apiPath);
+  public getDataFromFB() {
+    return this.http.get(environment.endpoint+'/api/custumer/Dat');
   }
 }

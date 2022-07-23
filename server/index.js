@@ -8,8 +8,8 @@ const path = require('path');
 
 
 var key = require("./keys/firebase-key.json");
-const { request } = require("http");
-const { response } = require("express");
+const { req } = require("http");
+const { response, application } = require("express");
 
 admin.initializeApp({
     credential: admin.credential.cert(key),
@@ -31,6 +31,15 @@ app.get("/api/:collection", async function(req, res) {
     res.send(datas)
 })
 
+app.get("/api/:collection/:docId", async function(req, res) {
+    let collectionName = req.params.collection;
+    let docId = req.params.docId;
+    let querySnapshot = await firestore.collection(collectionName).doc(docId).get();
+    let result = querySnapshot.data();
+    // console.log(result);
+    res.send(result);
+});
+
 app.post("/api", async(req, res) => {
     let body = req.body;
     console.log(body);
@@ -50,6 +59,16 @@ try{
     }
 });
 
+app.put("/api/:collection/:docId", async (req,res) => {
+    let collectionName = req.body.collection;
+    let docId = req.body.docId;
+
+    let data = await firestore.collection(collectionName).doc(docId).update(req.body.data);
+    res.send({
+      message: "Update successful!!",
+      updateTime: data.writeTime,
+    });
+  })
 
 let Port = 3000;
 app.listen(Port, () => {

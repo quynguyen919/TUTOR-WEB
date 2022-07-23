@@ -48,13 +48,17 @@ import { ListOrderComponent } from '../Components/list-order/list-order.componen
 import { OrderComponent } from '../Components/order/order.component';
 import { CommonModule } from '@angular/common';
 
+import { ProfileComponent } from '../Components/profile/profile.component';
+
 
 
 @NgModule({
   declarations: [
     ListOrderComponent,
     OrderComponent,
+    ProfileComponent
   ],
+  
   imports: [
     CommonModule,
     A11yModule,
@@ -155,6 +159,7 @@ import { CommonModule } from '@angular/common';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    ProfileComponent
   ]
 })
 export class SharedModule {}

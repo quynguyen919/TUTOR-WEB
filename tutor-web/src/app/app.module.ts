@@ -20,9 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactComponent } from './Components/contact/contact.component';
-import { OrderComponent } from './Components/order/order.component';
-import { ListOrderComponent } from './Components/list-order/list-order.component';
-import { CommonModule } from "@angular/common";
 import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/side-bar-admin.component';
 @NgModule({
   declarations: [

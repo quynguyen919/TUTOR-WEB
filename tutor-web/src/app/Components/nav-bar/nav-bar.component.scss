@@ -5,15 +5,17 @@
 .background_color {
     background-color: #069D86;
 }
-.circle img {
-  height: 35px;
-  width: 100%;
-  border-radius: 50%;
-}
-.circle{
-    padding-right: 2%;
 
+.circle img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
-.circle mat-icon :hover{
+
+.circle {
+    padding-right: 2%;
+}
+
+.circle mat-icon :hover {
     color: blue;
 }

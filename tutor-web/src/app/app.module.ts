@@ -24,6 +24,7 @@ import { OrderComponent } from './Components/order/order.component';
 import { ListOrderComponent } from './Components/list-order/list-order.component';
 import { CommonModule } from "@angular/common";
 import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/side-bar-admin.component';
+import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/s
     SignInComponent,
     ContactComponent,
     SideBarAdminComponent,
+    UpdateProfileComponent,
    
     
   ],

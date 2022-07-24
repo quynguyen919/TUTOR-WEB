@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="second-container">
-            <h2>Yêu cầu gia sư</h2>
+            <h2>Cập nhật thông tin gia sư</h2>
             <form [formGroup]="this.formContact">
                 <div class="form-group">
                     <label for="name-input">Họ tên*</label>
@@ -26,23 +26,46 @@
                         <mat-radio-button style="margin: 20px;" value="Offline">Offline </mat-radio-button>
                     </mat-radio-group>
                 </div>
-                <div class="form-group">
-                    <label for="email-input">Địa chỉ</label>
-                    <input formControlName="address" id="email-input" type="text" required>
+                <div style="margin: 10px 0 10px 0;">
+                    <label for="choose">Giới tính</label><br>
+                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                        <mat-radio-button value="Online">Nam</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Nữ</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div style="margin: 10px 0 10px 0;">
+                    <label for="choose">Công việc</label><br>
+                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                        <mat-radio-button value="Online">Gia sư</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Giáo viên</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Khác</mat-radio-button>
+                    </mat-radio-group>
                 </div>
                 <div class="form-group">
-                    <label for="phone-input">Enter phone number*</label>
+                    <label for="age-input">Tuổi</label>
+                    <input formControlName="place" id="age-input" type="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-input">Địa chỉ*</label>
+                    <input formControlName="place" id="email-input" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-input">Số điện thoại*</label>
                     <input formControlName="phoneNumber" id="phone-input" type="text" placeholder="+84" required>
                 </div>
                 <div class="form-group">
-                    <label for="name-input">Lương dự định</label>
-                    <input formControlName="salary" id="name-input" type="number" required>
+                    <label for="input">Môn dạy*</label>
+                    <input formControlName="" id="input" type="text" required>
                 </div>
                 <div class="form-group">
-                    <label for="message-textarea">Message</label>
-                    <textarea formControlName="req" id="message-textarea" placeholder="Yêu cầu"></textarea>
+                    <label for="message-textarea">Giới thiệu chung*</label>
+                    <textarea formControlName="experience" id="message-textarea" placeholder="Yêu cầu"></textarea>
                 </div>
-                <button [mat-dialog-close]="" (click)="this.addOrder()">Send message</button>
+                <div class="form-group">
+                    <label for="message-textarea">Hình ảnh*</label>
+                    <textarea formControlName="photoURL" type="photoURL" id="message-textarea" placeholder="Yêu cầu"></textarea>
+                </div>
+                <button [mat-dialog-close]="">CẬP NHẬT</button>
             </form>
         </div>
     </div>

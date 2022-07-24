@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./Pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'profile-customer',
+    path: 'profile-customer/:id',
     loadChildren: () =>
       import('./Pages/profile-customer/profile-customer.module').then(
         (m) => m.ProfileCustomerModule
@@ -47,4 +47,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

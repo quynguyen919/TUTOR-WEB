@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { UserService } from 'src/app/services/user.service';
-import { DialogDetailComponent } from 'src/app/Components/dialog-detail/dialog-detail.component';
+import { DialogDetailComponent } from '../../components/dialog-detail/dialog-detail.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -44,8 +44,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async Duyet(order: any) {
-    await Promise.all([, this.auth.deleteOrder(order.idDoc).toPromise()])
+  async Duyet(Order: any) {
+    await Promise.all([, this.auth.deleteOrder(Order.idDoc).toPromise()])
   }
 
 }

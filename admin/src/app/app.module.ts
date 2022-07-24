@@ -10,7 +10,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { DialogDetailComponent } from './Components/dialog-detail/dialog-detail.component';
+import { DialogDetailComponent } from './components/dialog-detail/dialog-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({

@@ -11,7 +11,7 @@
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Select</mat-label>
+                <mat-label>Môn học</mat-label>
 
                 <mat-select>
                     <mat-option value="one">Toán</mat-option>
@@ -20,7 +20,7 @@
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Select</mat-label>
+                <mat-label>Giới tính</mat-label>
 
                 <mat-select>
                     <mat-option value="one">Nam</mat-option>
@@ -29,7 +29,7 @@
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Select</mat-label>
+                <mat-label>Hình thức</mat-label>
 
                 <mat-select>
                     <mat-option value="one">Online</mat-option>
@@ -52,24 +52,54 @@
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         ">
-    <span *ngFor="let cus of customers">
-        <div class="card" style="width: 25rem;height:75%; border: 5px solid; margin: 5rem;">
-            <img [src]="cus.photoURL" class="card-img-top" style="margin: 0; width:100%;height:55%;">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 32px; font-weight: 900;">{{cus.name}}</h5>
-                <div style="display: flex;">
-                    <h2>{{cus.place}}</h2>
-                    <div
-                        style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;">
-                    </div>
-                    <h2>{{cus.Subject}}</h2>
+    <div class="card" style="width: 25rem;height:75%; border: 5px solid; margin: 5rem;">
+        <img src="https://i.vietgiaitri.com/2017/10/26/bo-anh-chan-dung-cuc-chat-ve-cac-sao-the-best-513afe.jpeg"
+            class="card-img-top" style="margin: 0; width:100%;height:55%;">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Huỳnh Đức Đạt</h5>
+            <div style="display: flex;">
+                <h2>Hà Nội</h2>
+                <div
+                    style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;">
                 </div>
-                <p class="card-text">{{cus.experience}}</p>
-                <a href="#" class="btn btn-primary">Mời dạy</a>
-                <a routerLink="/profile-customer" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
+                <h2>Toán Lý Hóa</h2>
             </div>
         </div>
-    </span>
+    </div>
+    <div class="card" style="width: 25rem;height:75%; border: 5px solid; margin: 5rem;">
+        <img src="https://hthaostudio.com/wp-content/uploads/2020/08/Profile-ca-nhan-1180x760.jpg" class="card-img-top"
+            style="margin: 0;width:100%;height:55%;">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Mai Lê Thanh Thiên</h5>
+            <div style="display: flex;">
+                <h2>Hồ Chí Minh</h2>
+                <div
+                    style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;">
+                </div>
+                <h2>lý Hóa Sinh</h2>
+            </div>
+            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
+            <a href="#" class="btn btn-primary">Mời dạy</a>
+            <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
+        </div>
+    </div>
+    <div class="card" style="width: 25rem;height:75%; border: 5px solid; margin: 5rem;">
+        <img src="https://hthaostudio.com/wp-content/uploads/2020/06/anh-doanh-nhan-dep.jpg" class="card-img-top"
+            style="margin: 0;width:100%;height:55%;">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 32px; font-weight: 900;">Đặng Thị Diệu Linh</h5>
+            <div style="display: flex;">
+                <h2>Huế</h2>
+                <div
+                    style="height: 35px; background-color:rgb(92, 92, 92); width: 0.5px; border: solid; margin-left: 15px; margin-right: 15px;">
+                </div>
+                <h2>Toán Lý Anh</h2>
+            </div>
+            <p class="card-text">Từng dạy ở các trường đại học, thpt,... Có nhiều năm kinh nghiệm.</p>
+            <a href="#" class="btn btn-primary">Mời dạy</a>
+            <a href="#" class="btn btn-primary" style="margin-left: 5px">Xem thông tin</a>
+        </div>
+    </div>
 
 
 </div>

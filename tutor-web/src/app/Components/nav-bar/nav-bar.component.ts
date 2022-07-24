@@ -4,6 +4,7 @@ import { UserService } from 'src/app/Services/user.service';
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 import {ContactComponent} from '../contact/contact.component'
+import { UpdateProfileComponent } from '../update-profile/update-profile.component';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -24,5 +25,8 @@ export class NavBarComponent implements OnInit {
   }
   public openC(){
     this.dialog.open(ContactComponent, { panelClass: 'custom-dialog-container' })
+  }
+  public openUpdateTutorProfile(){
+    this.dialog.open(UpdateProfileComponent, { panelClass: 'custom-dialog-container' })
   }
 }

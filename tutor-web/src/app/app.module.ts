@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactComponent } from './Components/contact/contact.component';
 import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/side-bar-admin.component';
+import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { SideBarAdminComponent } from './Pages/admin/components/side-bar-admin/s
     SignInComponent,
     ContactComponent,
     SideBarAdminComponent,
+    UpdateProfileComponent,
    
     
   ],

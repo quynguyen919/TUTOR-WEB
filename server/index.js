@@ -61,6 +61,13 @@ app.post("/api", async (req, res) => {
   }
 });
 
+app.put("/api/update-order", async (req, res) => {
+  const { id } = req.body;
+  await firestore.collection("Order").doc(id).update({
+    active: true,
+  });
+});
+
 app.put("/api/:collection/:docId", async (req, res) => {
   let collectionName = req.body.collection;
   let docId = req.body.docId;
@@ -78,11 +85,20 @@ app.put("/api/:collection/:docId", async (req, res) => {
 app.post("/api/create-customer", async (req, res) => {
   const data = req.body;
 
-  await firestore.collection("customer").doc(data.id).create(data);
+  await firestore.collection("customer").doc().create(data);
   res.send({
     message: "Create successful!!",
     updateTime: data.writeTime,
   });
+});
+
+app.get("/profile-detail/:id", async (req, res) => {
+  const id = req.params.id;
+  let user = await (
+    await firestore.collection("customer").doc(id).get()
+  ).data();
+  console.log(user);
+  res.send(user);
 });
 
 app.delete("/api/delete-customer/:id", async (req, res) => {

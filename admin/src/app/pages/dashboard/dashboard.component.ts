@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { UserService } from 'src/app/services/user.service';
-
+import { DialogDetailComponent } from 'src/app/Components/dialog-detail/dialog-detail.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -34,7 +34,12 @@ export class DashboardComponent implements OnInit {
       console.log(data);
     })
   }
-  fullday = this.d.getDate() + '-' + (this.d.getMonth() + 1) + '-' + this.d.getFullYear()
+
+
+  fullday = this.d.getDate() + '-' + (this.d.getMonth() + 1) + '-' + this.d.getFullYear();
+  // public openC(){
+  //   this.dialog.open(DialogDetailComponent, { panelClass: 'custom-dialog-container' })
+  // }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,72 @@
+<div style="height: 100vh;">
+    <div class="contact-form">
+        <div class="first-container">
+            <div class="info-container">
+                <div> <img class="icon">
+                    <h3>Liên hệ</h3>
+                    <p>+84 335965944</p>
+                </div>
+                <div><img class="icon">
+                    <h3>Hỗ trợ</h3>
+                    <p>QDT@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-container">
+            <h2>Cập nhật thông tin gia sư</h2>
+            <form [formGroup]="this.formContact">
+                <div class="form-group">
+                    <label for="name-input">Họ tên*</label>
+                    <input formControlName="name" id="name-input" type="text" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div style="margin: 10px 0 10px 0;">
+                    <label for="choose">Hình thức dạy học</label><br>
+                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                        <mat-radio-button value="Online">Online</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Offline </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div style="margin: 10px 0 10px 0;">
+                    <label for="choose">Giới tính</label><br>
+                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                        <mat-radio-button value="Online">Nam</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Nữ</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div style="margin: 10px 0 10px 0;">
+                    <label for="choose">Công việc</label><br>
+                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                        <mat-radio-button value="Online">Gia sư</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Giáo viên</mat-radio-button>
+                        <mat-radio-button style="margin: 20px;" value="Offline">Khác</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="form-group">
+                    <label for="age-input">Tuổi</label>
+                    <input formControlName="place" id="age-input" type="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-input">Địa chỉ*</label>
+                    <input formControlName="place" id="email-input" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-input">Số điện thoại*</label>
+                    <input formControlName="phoneNumber" id="phone-input" type="text" placeholder="+84" required>
+                </div>
+                <div class="form-group">
+                    <label for="input">Môn dạy*</label>
+                    <input formControlName="" id="input" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="message-textarea">Giới thiệu chung*</label>
+                    <textarea formControlName="experience" id="message-textarea" placeholder="Yêu cầu"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="message-textarea">Hình ảnh*</label>
+                    <textarea formControlName="photoURL" type="photoURL" id="message-textarea" placeholder="Yêu cầu"></textarea>
+                </div>
+                <button [mat-dialog-close]="">CẬP NHẬT</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,35 +1,35 @@
-
-
-  <div class="body-seeking">
+<div class="body-seeking">
     <table>
         <tr>
             <th>Yêu cầu đăng tuyển</th>
             <th style="border-right: none;">Học phí đề nghị</th>
             <th style="border-left: none;"></th>
-          </tr>
-    <tr>
-     
-        <td style="width:60%">
-            <ul id="description">
-                <li><h2>{{item.name}}</h2></li>
-                <li>{{item.phoneNumber}}</li>
-                <li style="width:70%">{{item.req}}</li>
-                <br>
-                <div  style="display: flex; ">
-                    <li> <button mat-stroked-button>{{item.status}}</button></li>
-                    <li> <button mat-stroked-button>{{item.address}}</button></li>
-                </div>
-            </ul>
-        </td>
-        <td id="salary">{{item.salary|number }}vnd/tháng</td>
-        <td id="btn"><button mat-raised-button color="accent">Đề nghị dạy</button></td>
-    
-    
-    </tr>
+        </tr>
+        <tr>
+
+            <td style="width:60%">
+                <ul id="description">
+                    <li>
+                        <h2>{{item.name}}</h2>
+                    </li>
+                    <li style="font-weight: 900;">{{item.phoneNumber}}</li>
+                    <li style="width:70%; font-weight: 900;">{{item.req}}</li>
+                    <br>
+                    <div style="display: flex; ">
+                        <li> <button mat-stroked-button>{{item.status}}</button></li>
+                        <li> <button mat-stroked-button>{{item.address}}</button></li>
+                    </div>
+                </ul>
+            </td>
+            <td id="salary">{{ item.salary|number }} vnd/tháng</td>
+            <td id="btn"><button mat-raised-button>Đề nghị dạy</button></td>
 
 
-   
-       
-    
+        </tr>
+
+
+
+
+
     </table>
-    </div>
+</div>

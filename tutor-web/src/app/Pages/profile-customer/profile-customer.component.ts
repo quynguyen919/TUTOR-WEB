@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { item } from 'src/app/models/item.model';
+import { ProfileService } from 'src/app/Services/profile.service';
 
 @Component({
   selector: 'app-profile-customer',
@@ -7,12 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileCustomerComponent implements OnInit {
 
-  constructor() {
-    
-   }
+  constructor(public profileSV:ProfileService ) {}
 
   ngOnInit(): void {
-    
   }
 
   

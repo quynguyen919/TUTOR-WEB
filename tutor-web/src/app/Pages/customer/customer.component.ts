@@ -8,10 +8,16 @@ import { CustomerService } from 'src/app/Services/customer.service';
   styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent implements OnInit {
-  constructor(public customerSV:CustomerService) {
-   }
-   
+  constructor(public customerSV: CustomerService) {
+  }
 
+  public customers: any = []
   ngOnInit(): void {
+    this.customerSV.getCustomers().subscribe(
+      res => {
+        this.customers = res
+        console.log(res)
+      }
+    )
   }
 }

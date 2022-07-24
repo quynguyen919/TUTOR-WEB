@@ -9,9 +9,9 @@ import { item } from '../models/item.model';
 })
 export class ProfileService {
 
-  public Item: Array<item>=[];
-  constructor(public http:HttpClient, public firestore:Firestore) {}
-    public getProfileDetails(){
-      return this.http.get(environment.endpoint+'/api/profile/a5h1MMxiIIUGjyn2Xkon');
-    }
+  public Item: Array<item> = [];
+  constructor(public http: HttpClient, public firestore: Firestore) { }
+  public getProfileDetails(id: string) {
+    return this.http.get(environment.endpoint + '/api/profile/' + id);
+  }
 }

@@ -113,3 +113,8 @@ let Port = 3000;
 app.listen(Port, () => {
   console.log(`Server is running on port http://localhost:${Port}/`);
 });
+
+app.get("/user/:id", (request, response) => {
+  const { id } = request.query;
+  console.log(`id:::::${id}`);
+});

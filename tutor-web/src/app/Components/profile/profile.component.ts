@@ -9,14 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  public Item!: item;
+  public Item!: any;
   constructor(public profileSV: ProfileService, private ActivatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.ActivatedRoute.params.subscribe(res => {
       if (res) {
         this.profileSV.getProfileDetails(res['id']).subscribe(data => {
-          this.Item = <item>data;
+          console.log(data)
+          this.Item = <any>data;
         }
         );
       }

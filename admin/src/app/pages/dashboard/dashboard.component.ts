@@ -30,11 +30,14 @@ export class DashboardComponent implements OnInit {
     });
     let collected = collection(firestore, 'Order');
     collectionData(collected, { idField: 'idDoc' }).subscribe((data) => {
-      this.ListOrder = data;
-      console.log(data);
+      this.ListOrder = [];
+      data.map((value: any) => {
+        if (value.active === false) {
+          this.ListOrder.push(value)
+        }
+      })
     })
   }
-
 
   fullday = this.d.getDate() + '-' + (this.d.getMonth() + 1) + '-' + this.d.getFullYear();
   // public openC(){
@@ -45,7 +48,9 @@ export class DashboardComponent implements OnInit {
   }
 
   async Duyet(order: any) {
-    await Promise.all([, this.auth.deleteOrder(order.idDoc).toPromise()])
+    this.auth.updateOrder(order.idDoc).subscribe(res => {
+      window.location.reload()
+    })
   }
 
 }

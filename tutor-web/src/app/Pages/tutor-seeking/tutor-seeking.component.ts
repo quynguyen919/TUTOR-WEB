@@ -7,13 +7,13 @@ import { OrderService } from 'src/app/Services/order.service';
   styleUrls: ['./tutor-seeking.component.scss']
 })
 export class TutorSeekingComponent implements OnInit {
-  
+
   public ListItem: Array<any> = []
   constructor(public order: OrderService) { }
 
   ngOnInit(): void {
-    
-    
+
+
   }
 
 }

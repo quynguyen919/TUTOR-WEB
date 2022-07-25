@@ -63,8 +63,10 @@ export class UserService {
     return this.http.post("http://localhost:3000/api/create-customer", customer)
   }
 
-  public deleteOrder(id: any) {
-    return this.http.delete("http://localhost:3000/api/delete-customer/" + id);
+  public updateOrder(id: any) {
+    return this.http.put("http://localhost:3000/api/update-order", {
+      id
+    });
   }
 
 }

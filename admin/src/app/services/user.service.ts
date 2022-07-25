@@ -69,4 +69,8 @@ export class UserService {
     });
   }
 
+  public deleteOrder(id: string) {
+    return this.http.delete(`http://localhost:3000/api/delete-order/${id}`)
+  }
+
 }

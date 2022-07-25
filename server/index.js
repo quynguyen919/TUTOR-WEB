@@ -103,7 +103,15 @@ app.get("/profile-detail/:id", async (req, res) => {
 
 app.delete("/api/delete-customer/:id", async (req, res) => {
   const id = req.params.id;
-  await firestore.collection("order").doc(id).delete();
+  await firestore.collection("Order").doc(id).delete();
+  res.send({
+    message: "Delete successful!!",
+  });
+});
+
+app.delete("/api/delete-order/:id", async (req, res) => {
+  const id = req.params.id;
+  await firestore.collection("Order").doc(id).delete();
   res.send({
     message: "Delete successful!!",
   });
@@ -112,9 +120,4 @@ app.delete("/api/delete-customer/:id", async (req, res) => {
 let Port = 3000;
 app.listen(Port, () => {
   console.log(`Server is running on port http://localhost:${Port}/`);
-});
-
-app.get("/user/:id", (request, response) => {
-  const { id } = request.query;
-  console.log(`id:::::${id}`);
 });

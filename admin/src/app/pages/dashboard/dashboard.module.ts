@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { DialogDetailComponent } from 'src/app/Components/dialog-detail/dialog-detail.component';
+import { DialogDetailComponent } from '../../components/dialog-detail/dialog-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DialogDetailComponent } from 'src/app/Components/dialog-detail/dialog-d
   imports: [
     CommonModule,
     SharedModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    HttpClientModule,
   ]
 })
 export class DashboardModule { }

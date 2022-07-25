@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
 import { UserService } from 'src/app/services/user.service';
-import { DialogDetailComponent } from '../../components/dialog-detail/dialog-detail.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -30,11 +29,14 @@ export class DashboardComponent implements OnInit {
     });
     let collected = collection(firestore, 'Order');
     collectionData(collected, { idField: 'idDoc' }).subscribe((data) => {
-      this.ListOrder = data;
-      console.log(data);
+      this.ListOrder = [];
+      data.map((value: any) => {
+        if (value.active === false) {
+          this.ListOrder.push(value)
+        }
+      })
     })
   }
-
 
   fullday = this.d.getDate() + '-' + (this.d.getMonth() + 1) + '-' + this.d.getFullYear();
   // public openC(){
@@ -44,8 +46,18 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async Duyet(Order: any) {
-    await Promise.all([, this.auth.deleteOrder(Order.idDoc).toPromise()])
+  Duyet(order: any) {
+    this.auth.updateOrder(order.idDoc).subscribe(res => {
+      window.location.reload()
+    })
+  }
+
+  Delete(id: string) {
+    this.auth.deleteOrder(id).subscribe(
+      (res: any) => {
+        alert(`${res.message}`)
+      }
+    )
   }
 
 }

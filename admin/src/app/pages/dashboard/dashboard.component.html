@@ -203,8 +203,9 @@
                                 <td>{{item.status}}</td>
                                 <td>{{item.req}}</td>
                                 <td style="width:120px;">
-                                    <a class="btn btn-sm btn-primary" (click)="Duyet(item)" >Duyệt</a>
-                                    <a class="btn btn-sm btn-danger" (click)="Duyet(item)" style="margin-left: 5px;">Xóa</a>
+                                    <a class="btn btn-sm btn-primary" (click)="Duyet(item)">Duyệt</a>
+                                    <a class="btn btn-sm btn-danger" (click)="Delete(item.idDoc)"
+                                        style="margin-left: 5px;">Xóa</a>
                                 </td>
 
                             </tr>

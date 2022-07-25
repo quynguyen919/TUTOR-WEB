@@ -14,28 +14,28 @@
         </div>
         <div class="second-container">
             <h2>Cập nhật thông tin gia sư</h2>
-            <form [formGroup]="this.formContact">
+            <form [formGroup]="customerForm">
                 <div class="form-group">
                     <label for="name-input">Họ tên*</label>
                     <input formControlName="name" id="name-input" type="text" placeholder="Nguyễn Văn A" required>
                 </div>
                 <div style="margin: 10px 0 10px 0;">
                     <label for="choose">Hình thức dạy học</label><br>
-                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                    <mat-radio-group formControlName="teachingForm" id="choose" aria-label="Select an option">
                         <mat-radio-button value="Online">Online</mat-radio-button>
                         <mat-radio-button style="margin: 20px;" value="Offline">Offline </mat-radio-button>
                     </mat-radio-group>
                 </div>
                 <div style="margin: 10px 0 10px 0;">
                     <label for="choose">Giới tính</label><br>
-                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                    <mat-radio-group formControlName="gender" id="choose" aria-label="Select an option">
                         <mat-radio-button value="Online">Nam</mat-radio-button>
                         <mat-radio-button style="margin: 20px;" value="Offline">Nữ</mat-radio-button>
                     </mat-radio-group>
                 </div>
                 <div style="margin: 10px 0 10px 0;">
                     <label for="choose">Công việc</label><br>
-                    <mat-radio-group formControlName="status" id="choose" aria-label="Select an option">
+                    <mat-radio-group formControlName="job" id="choose" aria-label="Select an option">
                         <mat-radio-button value="Online">Gia sư</mat-radio-button>
                         <mat-radio-button style="margin: 20px;" value="Offline">Giáo viên</mat-radio-button>
                         <mat-radio-button style="margin: 20px;" value="Offline">Khác</mat-radio-button>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     <label for="age-input">Tuổi</label>
-                    <input formControlName="place" id="age-input" type="number" required>
+                    <input formControlName="age" id="age-input" type="number" required>
                 </div>
                 <div class="form-group">
                     <label for="email-input">Địa chỉ*</label>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label for="input">Môn dạy*</label>
-                    <input formControlName="" id="input" type="text" required>
+                    <input formControlName="Subject" id="input" type="text" required>
                 </div>
                 <div class="form-group">
                     <label for="message-textarea">Giới thiệu chung*</label>
@@ -63,9 +63,10 @@
                 </div>
                 <div class="form-group">
                     <label for="message-textarea">Hình ảnh*</label>
-                    <textarea formControlName="photoURL" type="photoURL" id="message-textarea" placeholder="Yêu cầu"></textarea>
+                    <textarea formControlName="photoURL" type="photoURL" id="message-textarea"
+                        placeholder="Yêu cầu"></textarea>
                 </div>
-                <button [mat-dialog-close]="">CẬP NHẬT</button>
+                <button (click)="capNhat()">CẬP NHẬT</button>
             </form>
         </div>
     </div>
